@@ -6,7 +6,7 @@ The project consist of building a ML model that will predict the response tactic
 2. [Project Summary](#Project-Summary)
 3. [Data](#Data)
 4. [Results](#Results)
-5. [Acknowledgements_and_Additional_Scripts](#Acknowledgements-and-Additional-Scripts)
+5. [Acknowledgements and Additional Scripts](#Acknowledgements-and-Additional-Scripts)
 
 ## Installation
 The code should run using the standard Python packages (Python versions 3.*).
@@ -30,20 +30,22 @@ The data was obtained from a Figure Eight company and the following files was pr
 1. disaster_messages.csv
 2. disaster_categories.csv
 
-The files was read into python therefore completing the extract part of the ETL process. Transforming the data into a workable format was performed by merging the dataset using the id key. The duplicates was removed from the dataset and categories was seperated into different columns that was seperated by ;. The columns was renamed as per the order provided in the data.
+The files was read into python therefore completing the extract part of the ETL process. Transforming the data into a workable format was performed by merging the dataset using the id key. The duplicates was removed from the dataset and categories was separated into different columns that was separated by ;. The columns was renamed as per the order provided in the data.
 
-The category values was perseved to have 0 and 1 values only. Checkes was perfomed to see if this was the case, it was noted that one category named related had 0, 1 and 2 as values. Related values of 2 was dropped as the messages was in different lanuage and could not be tokenize. Another category called child alone had only 0 values and this category was dropped as well, since no predictions can be made from this level.
+The category values was preserved to have 0 and 1 values only. Checks was performed to see if this was the case, it was noted that one category named related had 0, 1 and 2 as values. Related values of 2 was dropped as the messages was in different language and could not be tokenize. Another category called child alone had only 0 values and this category was dropped as well, since no predictions can be made from this level.
 
-The NaN values in the dataset have no impact on the prediction of the model since the message will predict a corresponfing response.
+The NaN values in the dataset have no impact on the prediction of the model since the message will predict a corresponding response.
 
 The completed transformed data was loaded to SQL.
 
 ## Results
-
-The ML model was build using a pipeline as well as gridsearch to obatin the best model. To view the results the following code needs to be run in the flask app in the terminal: python app/run.py. After which you have to go to the website [here](https://view6914b2f4-3001.udacity-student-workspaces.com/) to view a summary of the data provided as two graphs. A message can be entered into the bar that states 'enter a message to classified' and clicking the classify message button. The message will be classified and the persons that need respond to the message will be marked in green.
+The ML model was build using a pipeline as well as grid-search to obtain the best model. To view the results the following code needs to be run in the flask app in the terminal: python app/run.py. After which you have to go to the website [here](https://view6914b2f4-3001.udacity-student-workspaces.com/) to view a summary of the data provided as two graphs. A message can be entered into the bar that states 'enter a message to classified' and clicking the classify message button. The message will be classified and the persons that need respond to the message will be marked in green.
 
 Screenshots wall be provided on both the summary of train data as well as a random classified message [here](https://github.com/sylvesters911/Project_Disaster_Response/blob/master/DisasterSummary.PNG) and [here](https://github.com/sylvesters911/Project_Disaster_Response/blob/master/ClassifyExample.PNG)
 
+To run the ETL and ML pipelines the scripts ETL Pipeline Preparation.ipynb and ML Pipeline Preparation.ipynb must be used, this was a precursor to the flask app. The processes was checked and refined in these scripts before moving them to the flask app.
+
+The flask app scripts is called process_data.py and train_classifier.py in the flask app the data and ML steps can be run by entering the following in the terminal and press enter python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db and python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl.
 
 ## Acknowledgements and Additional Scripts
 Acknowledgements sited is Udacity and an additional script is used to keep the session active, Figure Eight.
