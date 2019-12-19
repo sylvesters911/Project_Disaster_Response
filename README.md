@@ -40,10 +40,10 @@ The completed transformed data was loaded to SQL.
 
 ## Results
 
-The ML model was build using a pipeline as well as gridsearch to obatin the best model. To view the results the following code needs to be run in the flask app in the terminal: python app/run.py. After which you have to go to the website [here] (https://view6914b2f4-3001.udacity-student-workspaces.com/) to view a summary of the data provided as two graphs. A message can be entered into the bar that states 'enter a message to classified' and clicking the classify message button. The message will be classified and the persons that need respond to the message will be marked in green.
+The ML model was build using a pipeline as well as gridsearch to obatin the best model. To view the results the following code needs to be run in the flask app in the terminal: python app/run.py. After which you have to go to the website [here](https://view6914b2f4-3001.udacity-student-workspaces.com/) to view a summary of the data provided as two graphs. A message can be entered into the bar that states 'enter a message to classified' and clicking the classify message button. The message will be classified and the persons that need respond to the message will be marked in green.
 
-Screenshots wall be provided on both the summary of train data as well as a random classified message [here] () and [here] ()
+Screenshots wall be provided on both the summary of train data as well as a random classified message [here](https://github.com/sylvesters911/Project_Disaster_Response/blob/master/DisasterSummary.PNG) and [here](https://github.com/sylvesters911/Project_Disaster_Response/blob/master/ClassifyExample.PNG)
 
 
 ## Acknowledgements and Additional Scripts
-Acknowledgements sited is Udacity and an additional script is used to keep the session active, Figure Ei.
+Acknowledgements sited is Udacity and an additional script is used to keep the session active, Figure Eight.
